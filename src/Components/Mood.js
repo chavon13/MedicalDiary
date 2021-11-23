@@ -1,6 +1,7 @@
 import React from 'react'
+import Navbar from './Navbar'
 
-class Mood extends React.Component {
+export default class Mood extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,6 +26,9 @@ class Mood extends React.Component {
 
     render() {
         return (
+            <div>
+                <Navbar />
+                <h2>Mood</h2>
                 <form>
                     <label>
                         <input name='Happy'
@@ -64,10 +68,11 @@ class Mood extends React.Component {
                         checked={this.state.Hopeful}
                         onChange={this.isChecked} />
                         Hopeful
+                        <br></br>
+                        <button>Submit</button>
                     </label>
                 </form>
+            </div>
         )
     }
 }
-
-export default Mood
