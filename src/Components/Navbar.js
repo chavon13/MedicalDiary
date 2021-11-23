@@ -11,6 +11,7 @@ export default class Navbar extends React.Component {
                 <ul>
                     <Link to="/"></Link>
                     <Link to="/mood">Mood</Link>
+                    <Link to='/entrypage1'>Entry 1</Link>
                 </ul>
 
             </nav>
