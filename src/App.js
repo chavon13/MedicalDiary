@@ -7,7 +7,7 @@ import './App.css';
 import Login from './Components/Login';
 import Mood from './Components/Mood'
 import Entry1 from './Components/EntryPage1'
-
+import App from './Components/Background'
 
 
 import { initializeApp } from "firebase/app";
@@ -31,9 +31,10 @@ const analytics = getAnalytics(app);
 
 
 
-function App() {
+function Application() {
   return (
-    <div className="App">
+    <div className="Application">
+      
       <Router>
         <Routes>
           <Route path='/' element={<Login />} />
@@ -41,9 +42,10 @@ function App() {
           <Route path='/entrypage1' element={<Entry1 />} />
         </Routes>
       </Router>
+      <App />
       
     </div>
   );
 }
 
-export default App;
+export default Application;
