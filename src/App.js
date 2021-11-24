@@ -34,7 +34,6 @@ const analytics = getAnalytics(app);
 function Application() {
   return (
     <div className="Application">
-      
       <Router>
         <Routes>
           <Route path='/' element={<Login />} />
@@ -43,7 +42,6 @@ function Application() {
         </Routes>
       </Router>
       <App />
-      
     </div>
   );
 }

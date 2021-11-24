@@ -1,6 +1,81 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lobster+Two&display=swap');
 
+:root{
+    --ft-color: rgb(7, 207, 181);
+    --ft-size : 30px;
+    --head-size: 50px;
+    --head-color: white;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
+.Application {
+    background-image: linear-gradient(to bottom right, blue, rgb(7, 207, 181));
+    background-size: cover;
+    margin: auto;
+}
 
+.App {
+    position: relative;
+    z-index: 0;
+}
+
+.mood-all {
+    position:fixed;
+    right: 1000px;
+    top:100px;
+    z-index: 1;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.mood {
+    font-size: var(--ft-size);
+    font-family:'Caveat', cursive;
+    color: rgb(7, 207, 181)
+    
+}
+
+.mood-words {
+    padding: 20px;
+    /* color: var(--ft-color); */
+    line-height: 100px;
+    
+}
+
+.mood-title {
+    position:fixed;
+    right: 575px;
+    top:50px;
+    font-size: 65px;
+    color: var(--head-color);
+    font-family: 'Lobster Two', cursive;
+    
+}
+
+.mood-notes {
+    position:fixed;
+    bottom:200px;
+    right:300px;
+    height:300px;
+    width:600px;
+}
+
+.mood-notes-add {
+    position: fixed;
+    bottom:500px;
+    right:760px;
+    color:var(--ft-color);
+    font-size: 20px;
+}
+.mood-submit{
+    position:fixed;
+    bottom: 120px;
+    right:600px
+}
