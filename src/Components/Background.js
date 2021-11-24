@@ -7,12 +7,12 @@ const settings = {
     canvas: {
         canvasFillSpace: true,
         width: 200,
-        height: 500,
+        height: 690,
         useBouncyWalls: false
     },
     particle: {
-        particleCount: 50,
-        color: '#5cf2fa',
+        particleCount: 75,
+        color: '#fcfcfc',
         minSize: 2,
         maxSize: 5
     },
@@ -29,7 +29,7 @@ const settings = {
     }
 }
 
-return <ParticleBackground settings={settings} />
+return <ParticleBackground className='App' settings={settings} />
 
 }
 
