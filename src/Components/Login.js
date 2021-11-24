@@ -14,7 +14,8 @@ export default function Login() {
                         <input type='text' placeholder='Password'></input>
                     </div>
                 </form>
+                
             </div>
-        </div>
+            </div>       
     )
 }
