@@ -8,6 +8,29 @@ import Login from './Components/Login';
 import Mood from './Components/Mood'
 import Entry1 from './Components/EntryPage1'
 
+
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+console.log(process.env.REACT_APP_API_KEY)
+const APIkey = process.env.REACT_APP_API_KEY
+
+const firebaseConfig = {
+  apiKey: APIkey,
+  authDomain: "my-medical-diary-d925e.firebaseapp.com",
+  projectId: "my-medical-diary-d925e",
+  storageBucket: "my-medical-diary-d925e.appspot.com",
+  messagingSenderId: "1001903087964",
+  appId: "1:1001903087964:web:a7e92db25f9d9451cf2199",
+  measurementId: "G-6Q03F6LPMB"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +41,7 @@ function App() {
           <Route path='/entrypage1' element={<Entry1 />} />
         </Routes>
       </Router>
+      
     </div>
   );
 }
