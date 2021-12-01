@@ -6,6 +6,7 @@
     --ft-size : 30px;
     --head-size: 50px;
     --head-color: white;
+    --para-size: 20px
 }
 
 * {
@@ -78,4 +79,26 @@ input[type=checkbox] {
     position:fixed;
     bottom: 120px;
     right:600px
+}
+
+.entry1-all{
+    position:fixed;
+    /* right: 1000px;*/
+    top:100px; 
+    z-index: 1;
+}
+
+
+.entry-1{
+    position: relative;
+    left: 20px;
+    line-height: 30px;
+    padding: 20px
+}
+
+.input-1{
+    position: relative;
+    left:50px;
+    width: 450px;
+    height: 50px
 }
