@@ -8,6 +8,7 @@ import Login from './Components/Login';
 import Mood from './Components/Mood'
 import Entry1 from './Components/EntryPage1'
 import App from './Components/Background'
+import Entry2 from './Components/EntryPage2'
 
 
 import { initializeApp } from "firebase/app";
@@ -34,13 +35,14 @@ const DB = getFirestore(app);
 
 function Application() {
   return (
+    
     <div className="Application">
       <Router>
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/mood' element={<Mood DB={DB}/>} />
           <Route path='/entrypage1' element={<Entry1 DB={DB}/>} />
-          {/* <Route path='/entrypage2' element={<Entry2 />} /> */}
+          <Route path='/entrypage2' element={<Entry2 DB={DB}/>} />
         </Routes>
       </Router>
       <App />

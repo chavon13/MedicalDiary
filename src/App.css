@@ -6,7 +6,11 @@
     --ft-size : 30px;
     --head-size: 50px;
     --head-color: white;
-    --para-size: 20px
+    --para-size: 20px;
+    --h2-size:30px;
+    --ff-h2:'Lobster Two', cursive;
+    --ff-para: 'Caveat', cursive;
+    
 }
 
 * {
@@ -38,7 +42,7 @@ input[type=checkbox] {
 
 .mood {
     font-size: var(--ft-size);
-    font-family:'Caveat', cursive;
+    font-family:var(--ff-para);
     color: rgb(7, 207, 181)
     
 }
@@ -54,9 +58,9 @@ input[type=checkbox] {
     position:fixed;
     right: 575px;
     top:50px;
-    font-size: 65px;
+    font-size: 50px;
     color: var(--head-color);
-    font-family: 'Lobster Two', cursive;
+    font-family: var(--ff-h2);
     
 }
 
@@ -86,6 +90,7 @@ input[type=checkbox] {
     /* right: 1000px;*/
     top:100px; 
     z-index: 1;
+    font-family: var(--ff-para)
 }
 
 
@@ -93,7 +98,8 @@ input[type=checkbox] {
     position: relative;
     left: 20px;
     line-height: 30px;
-    padding: 20px
+    padding: 20px;
+    color: var(--ft-color)
 }
 
 .input-1{
@@ -101,4 +107,75 @@ input[type=checkbox] {
     left:50px;
     width: 450px;
     height: 50px
+}
+
+.nav {
+    display:flex;
+    background-color: white;
+    background-image: linear-gradient(rgb(7, 207, 181), blue );
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.navLi {
+    margin-right: 400px;
+    list-style-type: none;
+}
+
+.navLi:link {
+    color: white;
+    text-decoration: none;
+}
+
+.entry1-inputs{
+    text-align: center;
+    margin-right: 200px;
+    margin-top: 50px;
+    
+}
+
+.entry1-textArea{
+    display:flex;
+    position:relative;
+    left: 750px;
+    bottom:300px;
+    width:600px;
+    height:300px;
+}
+
+.entry1-addNotes{
+    display:flex;
+    position:relative;
+    left: 750px;
+    top:-300px;
+    color: var(--ft-color)
+}
+
+.entry1-submit {
+    display:flex;
+    position:relative;
+    justify-content:center;
+    bottom: 250px;
+    left: 650px;
+}
+
+.entry1-title{
+    position:fixed;
+    right: 575px;
+    top:50px;
+    font-size: var(--h2-size);
+    color: var(--head-color);
+    font-family: var(--ff-h2)
+}
+
+.medilog-title{
+    display:flex;
+    position:relative;
+    bottom:40px;
+    right:-100px;
+    color:var(--head-color)
+}
+
+a:link {
+    color:white;
 }
