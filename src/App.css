@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root{
     --ft-color: rgb(7, 207, 181);
@@ -10,6 +11,7 @@
     --h2-size:30px;
     --ff-h2:'Lobster Two', cursive;
     --ff-para: 'Caveat', cursive;
+    --fs-medi:
     
 }
 
@@ -57,16 +59,20 @@ input[type=checkbox] {
 .mood-title {
     position:fixed;
     right: 575px;
-    top:50px;
-    font-size: 50px;
+    top:120px;
     color: var(--head-color);
     font-family: var(--ff-h2);
+    font-size: var(--h2-size);
+    background-image: linear-gradient(0deg, rgb(248, 248, 252), var(--ft-color));
+    background-size:100%;
+    background-clip: text;
+    color: transparent;
     
 }
 
 .mood-notes {
     position:fixed;
-    bottom:200px;
+    bottom:150px;
     right:300px;
     height:300px;
     width:600px;
@@ -74,7 +80,7 @@ input[type=checkbox] {
 
 .mood-notes-add {
     position: fixed;
-    bottom:500px;
+    bottom:460px;
     right:760px;
     color:var(--ft-color);
     font-size: 20px;
@@ -83,6 +89,14 @@ input[type=checkbox] {
     position:fixed;
     bottom: 120px;
     right:600px
+}
+
+.mood-medilog{
+    position:relative;
+    top:5px;
+    left: 650px;
+    color: var(--head-color);
+    font-family: var(--ff-h2);
 }
 
 .entry1-all{
@@ -102,6 +116,8 @@ input[type=checkbox] {
     color: var(--ft-color)
 }
 
+
+
 .input-1{
     position: relative;
     left:50px;
@@ -115,10 +131,13 @@ input[type=checkbox] {
     background-image: linear-gradient(rgb(7, 207, 181), blue );
     padding: 20px;
     justify-content: space-between;
+    z-index: 1;
+
 }
 
+
 .navLi {
-    margin-right: 400px;
+    margin-right: 250px;
     list-style-type: none;
 }
 
@@ -161,21 +180,67 @@ input[type=checkbox] {
 
 .entry1-title{
     position:fixed;
-    right: 575px;
-    top:50px;
-    font-size: var(--h2-size);
+    right: 625px;
+    top:125px;
+    font-size: 28px;
     color: var(--head-color);
-    font-family: var(--ff-h2)
+    font-family: var(--ff-h2);
+    background-image: linear-gradient(0deg, rgb(248, 248, 252), var(--ft-color));
+    background-size:100%;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo-entry1 {
+    display:flex;
+    position:relative;
+    z-index: 0;
+    top: 0;
 }
 
 .medilog-title{
     display:flex;
     position:relative;
-    bottom:40px;
-    right:-100px;
-    color:var(--head-color)
+    bottom:60px;
+    right:-525px;
+    color:var(--head-color);
+    font-family: var(--ff-h2);
+    
+    
+    
 }
 
 a:link {
     color:white;
 }
+
+a:visited{
+    color: rgb(7, 207, 181);
+}
+
+.return-info {
+    line-height: 30px;
+    color: var(--ft-color);
+    font-family: var(--ff-para);
+    font-size: var(--para-size);
+    padding-left: 20px;
+    position:fixed;
+    z-index: 1;
+    padding: 50px;
+}
+
+.card{
+    border:solid 0.5px var(--ft-color);
+    border-style:outset;
+    box-shadow: 0 6px 10px 0 var(--ft-color);
+    transition: 0.3s;
+    width: 350px;
+    margin-top: 10%;
+    padding: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+

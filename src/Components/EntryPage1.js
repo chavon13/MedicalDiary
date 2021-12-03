@@ -50,13 +50,13 @@ export default class Entry1 extends React.Component {
             <div>
                 <Navbar />
                 <header>
-                <img src={Logo} alt="Logo" />
+                <img className='logo-entry1' src={Logo} alt="Logo" />
                 <div>
                     <h1 className='medilog-title'>MediLog Medical Journal</h1>
                 </div>
                 </header>
                 <div>
-                    <h2 className='entry1-title'> Keywords and Symptoms</h2>
+                    <h3 className='entry1-title'> Keywords and Symptoms</h3>
                 </div>
 
                 <form className='entry1-all' onSubmit={this.handleSubmit}>
