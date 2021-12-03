@@ -96,7 +96,12 @@ export default class Mood extends React.Component {
         return (
             <div >
                 <Navbar />
-                <h2 className='mood-title'>Mood</h2>
+
+                <div>
+                    <h1 className='mood-medilog'>MediLog Medical Journal</h1>
+                </div>
+                
+                <h3 className='mood-title'>Mood</h3>
                 <div className='mood-all'>
                     <label className='mood'>
                         <input

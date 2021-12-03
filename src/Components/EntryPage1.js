@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { setDoc, doc } from "firebase/firestore/lite";
+import Logo from './logo.png'
+import { setDoc, doc } from "firebase/firestore";
 
 export default class Entry1 extends React.Component {
     constructor(props) {
@@ -35,12 +36,12 @@ export default class Entry1 extends React.Component {
         setDoc(doc(this.props.DB, "Entry1", this.state.keyword), {
             keyword: this.state.keyword,
             value: this.state.value,
-            notes: this.state.notes
+            notes: this.state.notes,
     });
     this.setState({
         keyword: "",
         value: "",
-        notes: "",
+        notes: ""
     })
 }
 
@@ -48,32 +49,46 @@ export default class Entry1 extends React.Component {
         return(
             <div>
                 <Navbar />
+                <header>
+                <img className='logo-entry1' src={Logo} alt="Logo" />
+                <div>
+                    <h1 className='medilog-title'>MediLog Medical Journal</h1>
+                </div>
+                </header>
+                <div>
+                    <h3 className='entry1-title'> Keywords and Symptoms</h3>
+                </div>
+
                 <form className='entry1-all' onSubmit={this.handleSubmit}>
-                    <label>
-                        <div className='entry-1'>
-                        <p>Keywords - What are some keywords you would use to describe yourself right now?</p>
-                        <p>ex: Hungry, Sleepy, Exhausted</p>
-                        </div>
+                    <div className='entry1-inputs'>
+                        <label>
+                            <div className='entry-1'>
+                            <p>Keywords - What are some keywords you would use to describe yourself right now?</p>
+                            <p>ex: Hungry, Sleepy, Exhausted</p>
+                            </div>
+                            <div className='input'>
+                            <input className='input-1' type='text'  onChange={this.handleKeywordChange} />
+                            </div>
+                        </label>
+                            <br></br>
+                        <label>
+                            <div className='entry-1'>
+                            <p>Symptoms - Tell me about and symptoms you are feeling.</p>
+                            <p>ex: Headache, Nausea, Back Pain</p>
+                            </div>
+                            <div className='input'>
+                            <input className='input-1' type='text' onChange={this.handleChange} />
+                            </div>
+                        </label>
+                            <br></br>
+                    </div>
+                    <label className='addNotes-1'>
+                        <p className='entry1-addNotes'>Additional Notes</p>
                         <div>
-                        <input className='input-1' type='text'  onChange={this.handleKeywordChange} />
+                            <textarea className='entry1-textArea' onChange={this.handleNotesChange} />
                         </div>
-                    </label>
                         <br></br>
-                    <label>
-                        <div className='entry-1'>
-                        <p>Symptoms - Tell me about and symptoms you are feeling.</p>
-                        <p>ex: Headache, Nausea, Back Pain</p>
-                        </div>
-                        <div>
-                        <input className='input-1' type='text' onChange={this.handleChange} />
-                        </div>
-                    </label>
-                        <br></br>
-                    <label className='addnotes-1'>
-                        <p>Additional Notes</p>
-                        <textarea onChange={this.handleNotesChange} />
-                        <br></br>
-                        <button>Submit</button>
+                        <button className='entry1-submit'>Submit</button>
                     </label>
                 </form>
             </div>
