@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Logo from './logo.png'
 import { setDoc, doc } from "firebase/firestore";
+import Footer from './Footer'
 
 export default class Entry1 extends React.Component {
     constructor(props) {
@@ -50,12 +51,12 @@ export default class Entry1 extends React.Component {
             <div>
                 <Navbar />
                 <header>
-                <img className='logo-entry1' src={Logo} alt="Logo" />
-                <div>
-                    <h1 className='medilog-title'>MediLog Medical Journal</h1>
-                </div>
+                    <img className='logo-entry1' src={Logo} alt="Logo" />
+                    <div className='medilog1'>
+                        <h1 className='medilog-title'>MediLog Medical Journal</h1>
+                    </div>
                 </header>
-                <div>
+                <div className='keysym'>
                     <h3 className='entry1-title'> Keywords and Symptoms</h3>
                 </div>
 
@@ -91,6 +92,7 @@ export default class Entry1 extends React.Component {
                         <button className='entry1-submit'>Submit</button>
                     </label>
                 </form>
+                <Footer />
             </div>
         )
     }
