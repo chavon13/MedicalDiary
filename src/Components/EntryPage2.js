@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import{collection, query, getDocs, Timestamp } from "firebase/firestore";
+import{collection, query, getDocs, orderBy} from "firebase/firestore";
 import moment from 'moment';
 
 
@@ -19,7 +19,7 @@ export default class Entry2 extends React.Component {
         }
     }
     componentDidMount() {
-        const q = query(collection (this.props.DB, "moods"));
+        const q = query(collection(this.props.DB, "moods"),orderBy('createdAt'));
         getDocs(q).then((querySnapshot) =>{
             let moodData = [];
             querySnapshot.forEach((doc) =>{

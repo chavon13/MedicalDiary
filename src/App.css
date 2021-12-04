@@ -22,6 +22,7 @@
 .pageBackground {
     background-image: linear-gradient(to bottom right, blue, rgb(7, 207, 181));
     background-size: cover;
+    
 }
 
 .Application {
@@ -30,6 +31,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
+    
 }
 
 .App {
@@ -37,11 +39,12 @@
     z-index: 0;
 }
 
-.mood-all {
-    position:fixed;
-    right: 1000px;
-    top:100px;
-    z-index: 1;
+.mood-all2 {
+    display: flex;
+    min-height: 100%;
+    flex-direction:column;
+    overflow-x: hidden;
+    /* align-items:center; */
 }
 
 input[type=checkbox] {
@@ -49,6 +52,7 @@ input[type=checkbox] {
 }
 
 .mood {
+    padding-left: 300px;
     font-size: var(--ft-size);
     font-family:var(--ff-para);
     color: rgb(7, 207, 181)
@@ -238,6 +242,9 @@ a:visited{
 }
 
 .return-info {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     /* line-height: 30px; */
     color: var(--ft-color);
     font-family: var(--ff-para);

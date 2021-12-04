@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { addDoc, collection, Timestamp } from "firebase/firestore";
+import Footer from './Footer'
 
 export default class Mood extends React.Component {
     constructor(props) {
@@ -94,7 +95,7 @@ export default class Mood extends React.Component {
 
     render() {
         return (
-            <div >
+            <div className='mood-all2'>
                 <Navbar />
 
                 <div>
@@ -160,6 +161,7 @@ export default class Mood extends React.Component {
                     <p>{this.state.Calm}</p>
                     <p>{this.state.Hopeful}</p>
                 </div>
+                <Footer />
             </div>
         )
         
