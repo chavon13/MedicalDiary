@@ -35,17 +35,18 @@ const DB = getFirestore(app);
 
 function Application() {
   return (
-    
-    <div className="Application">
-      <Router>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/mood' element={<Mood DB={DB}/>} />
-          <Route path='/entrypage1' element={<Entry1 DB={DB}/>} />
-          <Route path='/entrypage2' element={<Entry2 DB={DB}/>} />
-        </Routes>
-      </Router>
-      <App />
+    <div className="pageBackground">
+      <App style={{position: "fixed", top: 0, zIndex: 1}}/>
+      <div className="Application">
+        <Router>
+          <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/mood' element={<Mood DB={DB}/>} />
+            <Route path='/entrypage1' element={<Entry1 DB={DB}/>} />
+            <Route path='/entrypage2' element={<Entry2 DB={DB}/>} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }

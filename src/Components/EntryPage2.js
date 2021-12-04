@@ -45,7 +45,6 @@ export default class Entry2 extends React.Component {
                     {this.state.loading === true && <p>loading...</p>}
                     {!this.state.loading && this.state.moods.map(function(mood){
                         return(
-                        <span>
                             <div className='card' key={mood.feelings}>
                             <p className='mood-notes2'>Your notes: {mood.moodNotes}</p>
                             {Object.keys(mood.feelings).map(function(feeling) {
@@ -57,7 +56,6 @@ export default class Entry2 extends React.Component {
                             })}
                             <p className='timestamp'>Created on: {moment(new Date(mood.createdAt.seconds*1000)).format("MMM Do YYYY hh:mm a")}</p>
                             </div>
-                        </span>
                     )})}
                 </div>
 
