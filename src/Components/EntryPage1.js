@@ -51,7 +51,9 @@ export default class Entry1 extends React.Component {
             <div>
                 <Navbar />
                 <header>
+                    <div className='logo'>
                     <img className='logo-entry1' src={Logo} alt="Logo" />
+                    </div>
                     <div className='medilog1'>
                         <h1 className='medilog-title'>MediLog Medical Journal</h1>
                     </div>
@@ -92,6 +94,7 @@ export default class Entry1 extends React.Component {
                         <button className='entry1-submit'>Submit</button>
                     </label>
                 </form>
+                <br></br>
                 <Footer />
             </div>
         )
