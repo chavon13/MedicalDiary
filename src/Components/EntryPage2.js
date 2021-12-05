@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './Navbar';
 import{collection, query, getDocs, orderBy} from "firebase/firestore";
 import moment from 'moment';
+import Footer from './Footer'
+import Logo from './logo.png'
 
 
 export default class Entry2 extends React.Component {
@@ -20,7 +22,7 @@ export default class Entry2 extends React.Component {
     }
     componentDidMount() {
         const q = query(collection(this.props.DB, "moods"),orderBy('createdAt'));
-        getDocs(q).then((querySnapshot) =>{
+    getDocs(q).then((querySnapshot) =>{
             let moodData = [];
             querySnapshot.forEach((doc) =>{
                 moodData.push(doc.data());
@@ -33,13 +35,15 @@ export default class Entry2 extends React.Component {
         return (
             <div>
                 <Navbar />
+                <img className='logo-entry-1' src={Logo} alt="Logo" />
 
-                <div>
-                    <h1>MediLog Medical Journal</h1>
-                </div>
+                <div className='medilog-entries'>
+                    <h1 className='medilog2'>MediLog Medical Journal</h1>
+                    <br></br>
 
-                <h3>Your Journal Entries</h3>
+                    <h3 className='journal-entries'>Your Journal Entries</h3>
                 <br></br>
+                </div>
 
                 <div className='return-info'>
                     {this.state.loading === true && <p>loading...</p>}
@@ -58,7 +62,7 @@ export default class Entry2 extends React.Component {
                             </div>
                     )})}
                 </div>
-
+                <Footer />
             </div>
         )
     }

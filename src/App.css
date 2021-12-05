@@ -11,8 +11,6 @@
     --h2-size:30px;
     --ff-h2:'Lobster Two', cursive;
     --ff-para: 'Caveat', cursive;
-    --fs-medi:
-    
 }
 
 * {
@@ -53,10 +51,15 @@ input[type=checkbox] {
 
 .mood {
     padding-left: 300px;
+    padding-top:400px;
     font-size: var(--ft-size);
     font-family:var(--ff-para);
     color: rgb(7, 207, 181)
     
+}
+
+.mood-all{
+    margin-top: -50px;
 }
 
 .mood-words {
@@ -68,7 +71,7 @@ input[type=checkbox] {
 
 .mood-title {
     position:fixed;
-    right: 575px;
+    right: 600px;
     top:120px;
     color: var(--head-color);
     font-family: var(--ff-h2);
@@ -82,7 +85,7 @@ input[type=checkbox] {
 
 .mood-notes {
     position:fixed;
-    bottom:150px;
+    bottom:200px;
     right:300px;
     height:300px;
     width:600px;
@@ -103,7 +106,7 @@ input[type=checkbox] {
 
 .mood-medilog{
     position:relative;
-    top:5px;
+    top:-50px;
     left: 650px;
     color: var(--head-color);
     font-family: var(--ff-h2);
@@ -113,6 +116,7 @@ input[type=checkbox] {
     display: flex;
     flex-direction:row;
     align-items:center;
+    justify-content: center;
     /* right: 1000px;*/
     /* top:100px;  */
     z-index: 1;
@@ -169,8 +173,8 @@ input[type=checkbox] {
 .entry1-textArea{
     /* display:flex; */
     /* position:relative; */
-    left: 750px;
-    bottom:300px;
+    /* left: 750px;
+    bottom:300px; */
     width:600px;
     height:300px;
     margin-left: -20px;
@@ -185,8 +189,8 @@ input[type=checkbox] {
 }
 
 .entry1-submit {
-    display:flex;
-    position:relative;
+    /* display:flex;
+    position:relative; */
     justify-content:center;
     bottom: 250px;
     left: 650px;
@@ -213,12 +217,18 @@ input[type=checkbox] {
     
 }
 
-.logo-entry1 {
+.logo {
     display:flex;
     position:relative;
     z-index: 0;
     top: 0;
+    width: 100px;
 }
+
+.logo1{
+    max-width:75px;
+}
+
 .medilog1 {
     display:flex;
     flex-direction: row;
@@ -256,6 +266,21 @@ a:visited{
     overflow-y: auto;
 }
 
+.medilog-entries{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--head-color);
+    font-family: var(--ff-h2);
+}
+
+.medilog2{
+    color: var(--head-color);
+    font-family: var(--ff-h2);
+    margin-top: -75px
+
+}
+
 .card{
     border:solid 0.5px var(--ft-color);
     border-style:outset;
@@ -266,13 +291,26 @@ a:visited{
     padding: 15px;
 }
 
+.journal-entries{
+    font-size: var(--ft-size);
+    background-image: linear-gradient(0deg, rgb(248, 248, 252), var(--ft-color));
+    background-size:100%;
+    background-clip: text;
+    color: transparent;
+}
+
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .footer{
+    position:absolute;
+    left:0;
+    bottom:30px;
+    right:0;
     text-align: center;
     justify-content: center;
+    margin-top: 25px;
 }
 
 

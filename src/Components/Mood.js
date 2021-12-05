@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import Footer from './Footer'
+import Logo from './logo.png'
 
 export default class Mood extends React.Component {
     constructor(props) {
@@ -97,10 +98,13 @@ export default class Mood extends React.Component {
         return (
             <div className='mood-all2'>
                 <Navbar />
-
+                <div className='logo1'>
+                <img className='logo-entry-1' src={Logo} alt="Logo" />
+                </div>
                 <div>
                     <h1 className='mood-medilog'>MediLog Medical Journal</h1>
                 </div>
+                
                 
                 <h3 className='mood-title'>Mood</h3>
                 <div className='mood-all'>
