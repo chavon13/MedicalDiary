@@ -7,7 +7,7 @@ export default class Footer extends React.Component{
             <div className='footer'>
                 <footer>
                     <p>Created By: <a href="https://ashleysavage.netlify.app/" target="_blank">Ashley Savage</a></p>
-                    <a href="mailto:chavon1189@gmail.com" class="footer__link">Email Me</a>
+                    <a href="mailto:chavon1189@gmail.com" className="footer__link">Email Me</a>
                 </footer>
             </div>
         )

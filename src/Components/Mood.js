@@ -156,16 +156,17 @@ export default class Mood extends React.Component {
                         <textarea value={this.state.moodNotes} placeholder='"Enter information about your mood here..."' className='mood-notes' onChange={this.handleMoodNotesChange} />
                         <br></br>
                     </div>
-                    <button onClick={() => this.onSubmit()} className='mood-submit'>Submit</button>
+                        <div>
+                            <button onClick={() => this.onSubmit()} className='mood-submit'>Submit</button>
+                        </div>
                     </label>
-
                     <p>{this.state.Happy}</p>
                     <p>{this.state.Sad}</p>
                     <p>{this.state.Angry}</p>
                     <p>{this.state.Calm}</p>
                     <p>{this.state.Hopeful}</p>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
         

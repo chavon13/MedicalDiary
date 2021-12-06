@@ -36,6 +36,9 @@
     display:flex;
     z-index: 0;
 }
+div.pageBackground{
+    height:100%;
+}
 
 .mood-all2 {
     display: flex;
@@ -54,14 +57,51 @@ input[type=checkbox] {
     padding-top:400px;
     font-size: var(--ft-size);
     font-family:var(--ff-para);
-    color: rgb(7, 207, 181)
+    color: rgb(7, 207, 181);
     
 }
 
+@media only screen and (min-width:300px) and (max-width:600px){
+    .mood {
+        /* float:left;
+        flex-direction: column; */
+        height: 100px;
+        padding-left:0px;
+        padding-top: 25px;
+    }
+} 
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .mood {
+        /* display:flex;
+        flex-direction: column; */
+        height: 100px;
+        padding-left:0px;
+        padding-top: 25px;
+        /* font-size: 15px; */
+    }
+} 
+
+
 .mood-all{
     margin-top: -50px;
+    transition: all 800ms ease-in-out;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .mood-all{
+        display:flex;
+        justify-content: center;
+        height:100%
+        
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .mood-all{
+        display:flex;
+        flex-direction:row;
+        
+    }
+}
 .mood-words {
     padding: 20px;
     /* color: var(--ft-color); */
@@ -69,6 +109,20 @@ input[type=checkbox] {
     
 }
 
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .mood-words{
+        font-size:10px;
+        /* float:left; */
+        /* display:flex;
+        flex-direction: row; */
+    }
+}
+
+@media only screen and (min-width: 600px)and (max-width:1200px){
+    .mood-words {
+        font-size: 15px;
+    }
+}
 .mood-title {
     position:fixed;
     right: 600px;
@@ -82,6 +136,22 @@ input[type=checkbox] {
     color: transparent;
     
 }
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .mood-title{
+        /* position:fixed; */
+        top: 125px;
+        left:175px;
+        max-width:200px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:1200px) {
+    .mood-title {
+        position:fixed;
+        /* right:-100px; */
+        top:150px;
+    }
+}
 
 .mood-notes {
     position:fixed;
@@ -89,21 +159,58 @@ input[type=checkbox] {
     right:300px;
     height:300px;
     width:600px;
+    transition: all 800ms ease-in-out;
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .mood-notes{
+        position:fixed;
+        top:300px;
+        right:500px;
+        height:150px;
+        width:300px;
+        /* align-items:center;
+        justify-content: center; */
+    }
+}
+
+@media only screen and (min-width: 600px)and (max-width:1200px){
+    .mood-notes {
+        position:fixed;
+        top:300px;
+        right:450px;
+        height:200px;
+        width:350px;
+    }
 }
 
 .mood-notes-add {
     position: fixed;
-    bottom:460px;
+    bottom:500px;
     right:760px;
     color:var(--ft-color);
     font-size: 20px;
 }
-.mood-submit{
+
+@media only screen and (min-width: 300px) and (max-width:600px) {
+.mood-notes-add{
     position:fixed;
-    bottom: 120px;
-    right:600px
+    flex-direction:right;
+    font-size:10px;
+    top: 250px;
+    left: 75px;
+    max-height:25px
+    }
 }
 
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .mood-notes-add {
+        position:fixed;
+        font-size:15px;
+        left:75px;
+        top:250px;
+    }
+}
 .mood-medilog{
     position:relative;
     top:-50px;
@@ -111,6 +218,41 @@ input[type=checkbox] {
     color: var(--head-color);
     font-family: var(--ff-h2);
 }
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .mood-medilog {
+        position:relative;
+        font-size:25px;
+        left:100px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .mood-medilog {
+        position:relative;
+        left: 100px;
+        font-size:30px;
+    }
+}
+
+.mood-submit {
+    display:flex;
+    position:absolute;
+    bottom:100px;
+    left:800px;
+}
+
+/* @media only screen and (min-width:300px) and (max-width:600px) {
+    .mood-submit{
+        position:absolute;
+        bottom:200px;
+        left:50px;
+        max-height:50px;
+        max-width:50px;
+    }
+} */
+
+
 
 .entry1-all{
     display: flex;
@@ -123,6 +265,21 @@ input[type=checkbox] {
     font-family: var(--ff-para);
 }
 
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .entry1-all{
+        display: flex;
+        flex-direction: column;
+        margin-left: 200px;
+        padding-left:15px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .entry1-all{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .entry-1{
     /* position: relative; */
@@ -131,8 +288,66 @@ input[type=checkbox] {
     padding: 20px;
     color: var(--ft-color)
 }
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .entry-1{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        /* padding:50px; */
+        margin-top: 50px;
+        padding-left:50px;
+        max-width: 60%;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .entry-1{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        max-width:60%;
+        margin-top: 50px;
+    }
+}
 
+.entry-1-2{
+    /* position: relative; */
+    left: 20px;
+    line-height: 30px;
+    padding: 20px;
+    color: var(--ft-color)
+}
 
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .entry-1-2{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        /* padding:50px; */
+        /* margin-top: 50px; */
+        padding-left:20px;
+        max-width: 90%;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:600px){
+    .entry-1-2{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        margin-right:100px;
+        margin-top:0px
+    }
+}
+
+.entry-1-2-words{
+    display:flex;
+    
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .entry-1-2-words{
+        display:flex;
+        margin-top: -15px
+    }
+}
 
 .input-1{
     /* position: relative; */
@@ -141,20 +356,89 @@ input[type=checkbox] {
     height: 50px
 }
 
+@media only screen and (min-width:300px) and (max-width: 600px) {
+    .input-1{
+        margin-top:0px;
+        margin-right:100px;
+        width:200px;
+        height:25px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width: 1200px) {
+    .input-1{
+        margin-right: 200px;
+        width:200px;
+        height:25px;
+    }
+}    
+
+
+.input-1-2{
+    /* position: relative; */
+
+    left:50px;
+    width: 450px;
+    height: 50px
+}
+@media only screen and (min-width:300px) and (max-width:600px){
+    .input-1-2{
+        /* width:300px;
+        height:50px; */
+    }
+}
+
+.inputBox-1{
+    /* position: relative; */
+    left:50px;
+    width: 450px;
+    height: 50px
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .inputBox-1{
+        margin-right:100px;
+        width:300px;
+        height:30px;
+
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .inputBox-1{
+        margin-right:100px;
+        width:200px;
+        height:25px;
+
+    }
+}
+
+
+
 .nav {
     display:flex;
     background-color: white;
-    background-image: linear-gradient(rgb(7, 207, 181), blue );
+    background-image: linear-gradient(rgb(7, 207, 181), blue);
     padding: 20px;
     justify-content: space-between;
     z-index: 1;
 
 }
 
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .nav{
+        max-width:100%;
+    }
+}
+
 
 .navLi {
     margin-right: 250px;
     list-style-type: none;
+}
+@media only screen and (min-width:300px) and (max-width:600px){
+    .navLi{
+        max-width:100%;
+    }
 }
 
 .navLi:link {
@@ -165,9 +449,15 @@ input[type=checkbox] {
 .entry1-inputs{
     text-align: center;
     justify-content: center;
-    margin-right: 200px;
+    margin-right: 100px;
     margin-top: -75px;
     
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .entry1-inputs {
+        margin-bottom:10px;
+    }
 }
 
 .entry1-textArea{
@@ -179,6 +469,26 @@ input[type=checkbox] {
     height:300px;
     margin-left: -20px;
 }
+@media only screen and (min-width:300px) and (max-width:600px){
+    .entry1-textArea{
+        display:flex;
+        width:300px;
+        height:100px;
+        /* margin-top:-20px; */
+        margin-right:290px
+
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .entry1-textArea{
+        display:flex;
+        width:300px;
+        height:100px;
+        /* margin-top:-20px; */
+        margin-right:300px
+
+    }
+}
 
 .entry1-addNotes{
     /* display:flex; */
@@ -187,6 +497,13 @@ input[type=checkbox] {
     top:-300px; */
     color: var(--ft-color)
 }
+@media only screen and (min-width:300px) and (max-width:600px){
+    .entry1-addNotes {
+        display:flex;
+        margin-top:-20px;
+
+    }
+}
 
 .entry1-submit {
     /* display:flex;
@@ -194,6 +511,13 @@ input[type=checkbox] {
     justify-content:center;
     bottom: 250px;
     left: 650px;
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .entry1-submit{
+        display:flex;
+        margin-left:100px;
+
+    }
 }
 
 .entry1-title{
@@ -209,12 +533,33 @@ input[type=checkbox] {
     color: transparent;
 }
 
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .entry1-title{
+        display:flex;
+        margin-right:100px;
+        font-size:20px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .entry1-title{
+        display:flex;
+        margin-right:350px;
+        margin-top:-40px;
+        font-size:20px;
+    }
+}
+
 .keysym {
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     
+}
+@media only screen and (min-width:300px) and (max-width:600px){
+    .keysym {
+        display:flex;
+    }
 }
 
 .logo {
@@ -225,15 +570,65 @@ input[type=checkbox] {
     width: 100px;
 }
 
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .logo{
+        width:50px
+    }
+}
+
+
+
 .logo1{
     max-width:75px;
 }
 
+@media only screen and (min-width:300px) and (max-width:600px){
+    .logo-entry-1 {
+        position:relative;
+        top:0px;
+        width:50px;
+        height:50px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .logo1 {
+        max-width:50px
+    }
+}
+
+.logo-entry1{
+    display:flex;
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .logo-entry1{
+        display:flex;
+        width:60px;
+        height:30;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .logo-entry1{
+        display:flex;
+        width:60px;
+        height:30;
+    }
+}
 .medilog1 {
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .medilog1{
+        display:flex;
+        margin-left:-100px;
+        margin-top:0px;
+    }
 }
 
 
@@ -242,6 +637,23 @@ input[type=checkbox] {
     color:var(--head-color);
     font-family: var(--ff-h2);    
 }
+@media only screen and (min-width:300px) and (max-width:600px){
+    .medilog-title{
+        display:flex;
+        font-size:25px;
+        margin-top:-20px;
+        margin-right:0px;
+
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .medilog-title{
+        display:flex;
+        font-size:25px;
+        margin-right:300px;
+    }
+}
+
 
 a:link {
     color:white;
@@ -265,6 +677,22 @@ a:visited{
     padding: 10px;
     overflow-y: auto;
 }
+@media only screen and (min-width:300px) and (max-width:600px){
+    .return-info{
+        display:flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .return-info{
+        display:flex;
+        flex-direction: column;
+        margin-bottom:0px;
+        margin-left: 50px;
+
+    }
+}
+
 
 .medilog-entries{
     display: flex;
@@ -273,13 +701,29 @@ a:visited{
     color: var(--head-color);
     font-family: var(--ff-h2);
 }
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .medilog-entries{
+        margin-right:250px
+    }
+}
 
 .medilog2{
     color: var(--head-color);
     font-family: var(--ff-h2);
     margin-top: -75px
-
 }
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .medilog2{
+        margin-top:0px
+    }
+}
+/* @media only screen and (min-width:600px) and (max-width:1200px){
+    .medilog2{
+        margin-top:-75px;
+        margin-right:200px;
+    }
+} */
 
 .card{
     border:solid 0.5px var(--ft-color);
@@ -290,7 +734,18 @@ a:visited{
     margin-top: 2%;
     padding: 15px;
 }
-
+@media only screen and (min-width:300px) and (max-width:600px){
+    .card{
+        display:flex;
+        margin-bottom:0px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .card{
+        display:flex;
+        flex-direction:column;
+    }
+}
 .journal-entries{
     font-size: var(--ft-size);
     background-image: linear-gradient(0deg, rgb(248, 248, 252), var(--ft-color));
