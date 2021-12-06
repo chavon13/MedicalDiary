@@ -36,6 +36,9 @@
     display:flex;
     z-index: 0;
 }
+div.pageBackground{
+    height:100%;
+}
 
 .mood-all2 {
     display: flex;
@@ -58,7 +61,7 @@ input[type=checkbox] {
     
 }
 
-@media only screen and (min-width:300px) and (max-width:1200px){
+@media only screen and (min-width:300px) and (max-width:600px){
     .mood {
         /* float:left;
         flex-direction: column; */
@@ -67,7 +70,16 @@ input[type=checkbox] {
         padding-top: 25px;
     }
 } 
-
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .mood {
+        /* display:flex;
+        flex-direction: column; */
+        height: 100px;
+        padding-left:0px;
+        padding-top: 25px;
+        /* font-size: 15px; */
+    }
+} 
 
 
 .mood-all{
@@ -75,14 +87,21 @@ input[type=checkbox] {
     transition: all 800ms ease-in-out;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1100px) {
+@media only screen and (min-width: 300px) and (max-width: 600px) {
     .mood-all{
         display:flex;
         justify-content: center;
+        height:100%
         
     }
 }
-
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .mood-all{
+        display:flex;
+        flex-direction:row;
+        
+    }
+}
 .mood-words {
     padding: 20px;
     /* color: var(--ft-color); */
@@ -90,7 +109,7 @@ input[type=checkbox] {
     
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1200px) {
+@media only screen and (min-width: 300px) and (max-width: 600px) {
     .mood-words{
         font-size:10px;
         /* float:left; */
@@ -99,9 +118,9 @@ input[type=checkbox] {
     }
 }
 
-@media only screen and (min-width: 600px)and (max-width:900px){
+@media only screen and (min-width: 600px)and (max-width:1200px){
     .mood-words {
-        font-size: 25px;
+        font-size: 15px;
     }
 }
 .mood-title {
@@ -126,10 +145,10 @@ input[type=checkbox] {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width:1100px) {
+@media only screen and (min-width: 600px) and (max-width:1200px) {
     .mood-title {
         position:fixed;
-        right:350px;
+        /* right:-100px; */
         top:150px;
     }
 }
@@ -155,13 +174,13 @@ input[type=checkbox] {
     }
 }
 
-@media only screen and (min-width: 600px)and (max-width:1100px){
+@media only screen and (min-width: 600px)and (max-width:1200px){
     .mood-notes {
         position:fixed;
         top:300px;
-        right:150px;
-        height:250px;
-        width:500px;
+        right:450px;
+        height:200px;
+        width:350px;
     }
 }
 
@@ -184,10 +203,11 @@ input[type=checkbox] {
     }
 }
 
-@media only screen and (min-width:600px) and (max-width:1100px) {
+@media only screen and (min-width:600px) and (max-width:1200px) {
     .mood-notes-add {
         position:fixed;
-        left:150px;
+        font-size:15px;
+        left:75px;
         top:250px;
     }
 }
@@ -210,7 +230,8 @@ input[type=checkbox] {
 @media only screen and (min-width:600px) and (max-width:1200px){
     .mood-medilog {
         position:relative;
-        left: 250px;
+        left: 100px;
+        font-size:30px;
     }
 }
 
@@ -656,6 +677,22 @@ a:visited{
     padding: 10px;
     overflow-y: auto;
 }
+@media only screen and (min-width:300px) and (max-width:600px){
+    .return-info{
+        display:flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .return-info{
+        display:flex;
+        flex-direction: column;
+        margin-bottom:0px;
+        margin-left: 50px;
+
+    }
+}
+
 
 .medilog-entries{
     display: flex;
@@ -664,13 +701,29 @@ a:visited{
     color: var(--head-color);
     font-family: var(--ff-h2);
 }
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .medilog-entries{
+        margin-right:250px
+    }
+}
 
 .medilog2{
     color: var(--head-color);
     font-family: var(--ff-h2);
     margin-top: -75px
-
 }
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .medilog2{
+        margin-top:0px
+    }
+}
+/* @media only screen and (min-width:600px) and (max-width:1200px){
+    .medilog2{
+        margin-top:-75px;
+        margin-right:200px;
+    }
+} */
 
 .card{
     border:solid 0.5px var(--ft-color);
@@ -681,7 +734,18 @@ a:visited{
     margin-top: 2%;
     padding: 15px;
 }
-
+@media only screen and (min-width:300px) and (max-width:600px){
+    .card{
+        display:flex;
+        margin-bottom:0px;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:1200px){
+    .card{
+        display:flex;
+        flex-direction:column;
+    }
+}
 .journal-entries{
     font-size: var(--ft-size);
     background-image: linear-gradient(0deg, rgb(248, 248, 252), var(--ft-color));

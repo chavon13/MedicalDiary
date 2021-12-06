@@ -95,7 +95,7 @@ export default class Entry1 extends React.Component {
                     </label>
                 </form>
                 <br></br>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }

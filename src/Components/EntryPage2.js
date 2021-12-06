@@ -62,7 +62,7 @@ export default class Entry2 extends React.Component {
                             </div>
                     )})}
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }

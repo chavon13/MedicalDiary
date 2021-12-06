@@ -166,7 +166,7 @@ export default class Mood extends React.Component {
                     <p>{this.state.Calm}</p>
                     <p>{this.state.Hopeful}</p>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
         
