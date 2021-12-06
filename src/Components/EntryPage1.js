@@ -66,7 +66,7 @@ export default class Entry1 extends React.Component {
                     <div className='entry1-inputs'>
                         <label>
                             <div className='entry-1'>
-                            <p>Keywords - What are some keywords you would use to describe yourself right now?</p>
+                            <p className='entry-1-words'>Keywords - What are some keywords that would describe you right now?</p>
                             <p>ex: Hungry, Sleepy, Exhausted</p>
                             </div>
                             <div className='input'>
@@ -75,12 +75,12 @@ export default class Entry1 extends React.Component {
                         </label>
                             <br></br>
                         <label>
-                            <div className='entry-1'>
-                            <p>Symptoms - Tell me about and symptoms you are feeling.</p>
+                            <div className='entry-1-2'>
+                            <p className='entry-1-2-words'>Symptoms - Tell me about and symptoms you are feeling.</p>
                             <p>ex: Headache, Nausea, Back Pain</p>
                             </div>
-                            <div className='input'>
-                            <input className='input-1' type='text' onChange={this.handleChange} />
+                            <div className='input-1-2'>
+                            <input className='inputBox-1' type='text' onChange={this.handleChange} />
                             </div>
                         </label>
                             <br></br>
